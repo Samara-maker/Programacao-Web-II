@@ -1,0 +1,36 @@
+<h1>
+    <%= titulo %>
+</h1>
+
+<ol>
+    <% for( let index=0; index < listaPessoas.length; index++ ) { %>
+        <li>
+            <%= listaPessoas [index].nome %>: <%= listaPessoas [index].email %>
+        </li>
+        <% } %>
+</ol>
+
+<table border="2">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let index=0; index < listaPessoas.length; index++) { %>
+            <tr>
+                <td>
+                    <%= index + 1 %>
+                </td>
+                <td>
+                    <%= listaPessoas[index].nome %>
+                </td>
+                <td>
+                    <%= listaPessoas[index].email %>
+                </td>
+            </tr>
+            <% } %>
+    </tbody>
+</table>
