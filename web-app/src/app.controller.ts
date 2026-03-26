@@ -39,4 +39,10 @@ export class AppController {
   }
 
 
+  //Login
+  @Get('/login')
+  @Render('autenticacao/login')
+  login(): object {
+    return { layout:false }
+  }
 }
